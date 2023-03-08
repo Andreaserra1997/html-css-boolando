@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    max-width: 800px;
+    margin-inline: auto;
+    margin-top: 4rem;
+}
+
 header {
     height: 4rem;
     background-color: coral;
@@ -14,10 +20,9 @@ header {
     display: flex;
 }
 
-header .container {
+header .header-container {
     height: 100%;
     margin-inline: auto;
-    max-width: 900px;
 }
 
 .gender-list {
@@ -31,8 +36,26 @@ header .container {
     height: 100%;
     align-items: center;
     padding-inline: .3em;
+    text-decoration: none;
+    color: white;
 }
 
 .gender-list img {
     height: 1.5rem;
+}
+
+.container {
+    display: flex;
+    max-width: 800px;
+}
+
+.image {
+    flex: 0 1 30%;
+    height: 400px;
+    margin-top: 20px;
+    margin-right: 1rem;
+}
+
+.red-price {
+    color: red;
 }
