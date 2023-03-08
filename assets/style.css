@@ -5,9 +5,12 @@
 }
 
 body {
-    max-width: 800px;
-    margin-inline: auto;
     margin-top: 4rem;
+}
+
+.max-width {
+    max-width: 880px;
+    margin-inline: auto;
 }
 
 header {
@@ -18,6 +21,7 @@ header {
     left: 0;
     right: 0;
     display: flex;
+    z-index: 100;
 }
 
 header .header-container {
@@ -47,15 +51,65 @@ header .header-container {
 .container {
     display: flex;
     max-width: 800px;
+    gap: 1rem;
 }
 
-.image {
-    flex: 0 1 30%;
-    height: 400px;
-    margin-top: 20px;
-    margin-right: 1rem;
+.container > div {
+    flex: 1 1 30%;
 }
+.image {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  .position:hover .overlay {
+    opacity: 1;
+  }
 
 .red-price {
     color: red;
+}
+
+.price {
+    text-decoration: line-through;
+}
+
+.position {
+    position: relative;
+}
+
+.sale {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    background-color: red;
+}
+
+.green {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background-color: green;
+}
+
+.only {
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    background-color: green;
+}
+
+.favorites {
+    position: absolute;
+    right: 10px;
+    top: 25px;
 }
